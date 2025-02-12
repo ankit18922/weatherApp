@@ -51,7 +51,7 @@ function InfoBox({info}) {
           <p>Min Temp = {convertTemp(info.tempMin)}&deg;{isCelsius ? "C" : "F"}</p>
           <p>Max Temp = {convertTemp(info.tempMax)}&deg;{isCelsius ? "C" : "F"}</p>
           <p>Wind Speed = {info.windSpeed} m/s</p>
-          <p>The Weather can be described as <i> {info.weather} </i> and  feels like {convertTemp(info.feelsLike)}&deg;C</p>
+          <p>The Weather can be described as <i> {info.weather} </i> and  feels like {convertTemp(info.feelsLike)}&deg;{isCelsius ? "C" : "F"}</p>
         </Typography>
         <Button variant="contained" onClick={() => setIsCelsius(!isCelsius)}>
                          {isCelsius ? "Fahrenheit" : "Celsius"}
